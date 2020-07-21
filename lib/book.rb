@@ -2,40 +2,15 @@ class Shoe
   def initialize(brand)
     @brand = brand
   end
- 
-  def brand
-    @brand
+
+  attr_reader :brand
+  attr_accessor :color, :size, :material, :condition
+
+  def cobble()
+    self.condition = "new"
+    puts "Your shoe is as good as new!"
   end
- 
-  def size=(size)
-    @size = size
-  end
- 
-  def size
-    @size
-  end
- 
-  def material=(material)
-    @material = material
-  end
- 
-  def material
-    @material
-  end
- 
-  def condition =(condition)
-    @condition = condition
-  end
- 
-  def condition
-    @condition
-  end
- 
-  def turn_page
-    puts "Flipping the page...wow, you read fast!"
-  end
- 
+
 end
 
-book = Book.new ("Some Title")
-book.turn_page
+Shoe.new("Nike")
